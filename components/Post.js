@@ -8,10 +8,12 @@ const Post = ({name,descr,message,photoUrl}) => {
             <img
             src="https://media-exp2.licdn.com/dms/image/C4D03AQFUWjDlOD8vXQ/profile-displayphoto-shrink_100_100/0/1612563234794?e=1661990400&v=beta&t=WvKeZnMoBBM2OxaC3o-NTlZUZpNeqCm6vKooQwDYSI4"
             alt="avatar"
-            className="w-[4rem] h-[4rem] shadow-md rounded-full shadow-gray-400 bg-slate-200"
+            className="w-[2.5rem] h-[2.5rem] shadow-md rounded-full shadow-gray-400 bg-slate-200"
           />
             </div>
-            <div className="post__info"></div>
+            <div className="post__info">
+                <h4></h4>
+            </div>
             <div className="post__body"></div>        
         </div>    
     </>
