@@ -16,7 +16,7 @@ const Feed = (props) => {
   return (
     <>
       <div className={styles.feed}>
-        <div className={styles.feed__inputcontainer} id="media">
+        <div className={styles.feed__inputcontainer}>
           <div className={styles.feed__input} id="media1">
             <CreateIcon />
             <form>

@@ -5,6 +5,7 @@
     text-align: center;
     border-radius: 10px;
     height: fit-content;
+    width: 500px;
   }
   .sidebar__stats {
     padding: 0.6rem;
