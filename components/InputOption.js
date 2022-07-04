@@ -6,7 +6,7 @@ const InputOption = ({title , Icons , color}) => {
         <div className="flex  items-center hover:bg-[#F5F5F5] p-[0.8rem]">
             
             <Icons style={{color: color}}/>
-            <h4>{title}</h4>
+            <h4 className='ml-1 font-semibold'>{title}</h4>
         </div>
     </>
   )
