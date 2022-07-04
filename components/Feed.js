@@ -6,6 +6,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
+import Post from "./Post";
 
 
 const Feed = (props) => {
@@ -33,7 +34,9 @@ const Feed = (props) => {
             <InputOption title="video" color="#E7A33E" Icons={SubscriptionsIcon}/>
             <InputOption title="Events" color="#C0CBCD" Icons={EventNoteIcon}/>
             <InputOption title="Write Article" color="#7FC15E" Icons={CalendarViewDayIcon}/>
-          </div>   
+          </div> 
+
+          <Post name='Mir Kawash Habibzade' descr="Description" message="messasge goes here" />  
         </div>
       </div>
     </>
