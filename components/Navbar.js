@@ -42,8 +42,8 @@ const Navbar = () => {
         <div className="flex items-center justify-center ">
           {nav.map((nav, index) => {
             return (
-              <div
-                className="mr-[0.5rem] flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal"
+              <Link href='/'><div
+                className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal"
                 key={index}
               >
                 {nav.Icon}
@@ -56,7 +56,7 @@ const Navbar = () => {
                 />
 
                 <span className=" text-[10px]">{nav.name1}</span>
-              </div>
+              </div></Link>
              
             );
           })}
