@@ -42,9 +42,9 @@ const Navbar = () => {
         <div className="flex items-center justify-center ">
           {nav.map((nav, index) => {
             return (
-              <Link href='/'><div
+              <Link href='/' key={index}><div
                 className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal"
-                key={index}
+                
               >
                 {nav.Icon}
                 <span className="hidden lg:block">{nav.name}</span>
