@@ -1,3 +1,5 @@
+/** @format */
+
 import SearchIcon from "@mui/icons-material/Search";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
@@ -22,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="xxl:flex-col  md:flex  flex-1  sticky top-0   justify-around bg-white border-solid border-b-[0.1px] border-gray-300 ">
+      <div className="xxl:flex-col   md:flex  flex-1  sticky top-0  justify-around  bg-white border-solid border-b-[0.1px] border-gray-300 ">
         <div className="flex items-center justify-center">
           <img
             src="https://img.icons8.com/color/48/000000/linkedin.png"
@@ -38,30 +40,27 @@ const Navbar = () => {
             />
           </div>
         </div>
-       
+
         <div className="flex items-center justify-center ">
           {nav.map((nav, index) => {
             return (
-              <Link href='/' key={index}><div
-                className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal"
-                
-              >
-                {nav.Icon}
-                <span className="hidden lg:block">{nav.name}</span>
+              <Link href="/" key={index}>
+                <div className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal">
+                  {nav.Icon}
+                  <span className="hidden lg:block">{nav.name}</span>
 
-                <img
-                  src={nav.avatar}
-                  alt=""
-                  className="rounded-full w-[2.5rem]"
-                />
+                  <img
+                    src={nav.avatar}
+                    alt=""
+                    className="rounded-full w-[2.5rem]"
+                  />
 
-                <span className=" text-[10px]">{nav.name1}</span>
-              </div></Link>
-             
+                  <span className=" text-[10px]">{nav.name1}</span>
+                </div>
+              </Link>
             );
           })}
         </div>
-       
       </div>
     </>
   );
