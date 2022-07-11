@@ -1,0 +1,18 @@
+/** @format */
+
+.post {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  background-color: white;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+}
+
+.post__header {
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+
+.post__info {
+  margin-left: 0.7rem;
+}
