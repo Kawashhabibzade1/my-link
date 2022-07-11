@@ -1,6 +1,11 @@
 /** @format */
 
+import InputOption from "./InputOption";
+import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import styles from "/styles/Post.module.css";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 const Post = ({ name, descr, message, photoUrl }) => {
   return (
     <>
@@ -17,8 +22,18 @@ const Post = ({ name, descr, message, photoUrl }) => {
           </div>
         </div>
 
-        <div className="post__body">
+        <div className={styles.post__body}>
           <p>{message}</p>
+        </div>
+        <div className={styles.post__buttons}>
+          <InputOption
+            title="Like"
+            color="gray"
+            Icons={ThumbUpAltOutlinedIcon}
+          />
+          <InputOption title="Comment" color="gray" Icons={ChatOutlinedIcon} />
+          <InputOption title="Share" color="gray" Icons={ShareOutlinedIcon} />
+          <InputOption title="Send" color="gray" Icons={SendOutlinedIcon} />
         </div>
       </div>
     </>

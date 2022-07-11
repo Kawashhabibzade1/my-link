@@ -16,3 +16,13 @@
 .post__info {
   margin-left: 0.7rem;
 }
+
+.post__body {
+  overflow-wrap: anywhere;
+}
+.post__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
