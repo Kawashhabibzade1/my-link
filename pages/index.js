@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar";
 export default function Home() {
   return (
     <>
-      <Navbar getaway="/" />
+      <Navbar />
 
       <div className="app" id="media">
         <div className="app__body">

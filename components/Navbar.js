@@ -10,12 +10,12 @@ import Link from "next/link";
 
 const Navbar = (props) => {
   const nav = [
-    { name: "home", Icon: <HomeRoundedIcon /> },
+    { name: "home", Icon: <HomeRoundedIcon />, getaway: "/" },
 
-    { name: "My Network", Icon: <ConnectWithoutContactIcon /> },
-    { name: "jobs", Icon: <WorkIcon /> },
-    { name: "Messages", Icon: <ChatIcon /> },
-    { name: "Notification", Icon: <NotificationsActiveIcon /> },
+    { name: "My Network", Icon: <ConnectWithoutContactIcon />, getaway: "/myNetwork" },
+    { name: "jobs", Icon: <WorkIcon />, getaway: "/job" },
+    { name: "Messages", Icon: <ChatIcon />, getaway: "/msg" },
+    { name: "Notification", Icon: <NotificationsActiveIcon />, getaway: "/" },
     {
       avatar:
         "https://media-exp2.licdn.com/dms/image/C4D03AQFUWjDlOD8vXQ/profile-displayphoto-shrink_100_100/0/1612563234794?e=1661990400&v=beta&t=WvKeZnMoBBM2OxaC3o-NTlZUZpNeqCm6vKooQwDYSI4",
@@ -45,8 +45,8 @@ const Navbar = (props) => {
         <div className="flex items-center justify-center ">
           {nav.map((nav, index) => {
             return (
-              <Link href="/about" key={index}>
-                <div className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal">
+              <Link href={`${nav.getaway}`} key={index}>
+                <a className="mr-[0.5rem] hover:text-[#0a66c2] cursor-pointer flex flex-col text-small items-center mt-1 px-1 py-1 lg:px-1 lg:py-1 text-[0.8rem] font-normal">
                   {nav.Icon}
                   <span className="hidden lg:block">{nav.name}</span>
 
@@ -57,7 +57,7 @@ const Navbar = (props) => {
                   />
 
                   <span className=" text-[10px]">{nav.name1}</span>
-                </div>
+                </a>
               </Link>
             );
           })}

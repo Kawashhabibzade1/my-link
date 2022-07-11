@@ -34,11 +34,11 @@ const Sidebar = () => {
         <div className={styles.sidebar__stats}>
           <div className={styles.sidebar__stat}>
             <h6>Connections</h6>
-            <p className={styles.stats__number}>1236 Connects</p>
+            <p className={styles.stats__number}> 1236 Connects</p>
           </div>
           <div className={styles.sidebar__stat}>
             <h6>Who viewed you </h6>
-            <p className={styles.stats__number}>1000 Views</p>
+            <p className={styles.stats__number}> 1000 Views</p>
           </div>
         </div>
         <div className={styles.sidebar__bottom}>
