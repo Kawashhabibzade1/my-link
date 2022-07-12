@@ -7,9 +7,8 @@ import Sidebar from "../components/Sidebar";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <div className="app" id="media">
+        <Navbar />
         <div className="app__body">
           <Sidebar />
           <Feed />

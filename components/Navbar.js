@@ -12,7 +12,11 @@ const Navbar = (props) => {
   const nav = [
     { name: "home", Icon: <HomeRoundedIcon />, getaway: "/" },
 
-    { name: "My Network", Icon: <ConnectWithoutContactIcon />, getaway: "/myNetwork" },
+    {
+      name: "My Network",
+      Icon: <ConnectWithoutContactIcon />,
+      getaway: "/myNetwork",
+    },
     { name: "jobs", Icon: <WorkIcon />, getaway: "/job" },
     { name: "Messages", Icon: <ChatIcon />, getaway: "/msg" },
     { name: "Notification", Icon: <NotificationsActiveIcon />, getaway: "/" },
@@ -25,7 +29,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div className="xxl:flex-col   md:flex  flex-1  sticky top-0  justify-around  bg-white border-solid border-b-[0.1px] border-gray-300 ">
+      <div className="xxl:flex-col   md:flex    sticky top-0  justify-around  bg-white border-solid border-b-[0.1px] border-gray-300 ">
         <div className="flex items-center justify-center">
           <img
             src="https://img.icons8.com/color/48/000000/linkedin.png"
