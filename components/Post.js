@@ -17,7 +17,7 @@ const Post = ({ name, descr, message, photoUrl }) => {
             className="w-[2.5rem] h-[2.5rem] shadow-md rounded-full shadow-gray-400 bg-slate-200"
           />
           <div className={styles.post__info}>
-            <h1>Mir Kawash Habibzade</h1>
+            <h1>{name}</h1>
             <h4 className="font-[300] text-gray-400 text-[0.6rem]">{descr}</h4>
           </div>
         </div>

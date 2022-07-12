@@ -1,7 +1,7 @@
 /** @format */
 
 import CreateIcon from "@mui/icons-material/Create";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputOption from "./InputOption";
 import styles from "/styles/Feed.module.css";
 import ImageIcon from "@mui/icons-material/Image";
@@ -9,11 +9,30 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
 import Post from "./Post";
+import { db } from "./firebase";
+import firebase from "firebase/compat/app";
 
-const Feed = (props) => {
+const Feed = () => {
+  const [input, setInput] = useState("");
+  const [posts, setPosts] = useState([]);
   const [show, setShow] = useState(false);
   const onDbao = () => setShow(true);
   console.log(show);
+
+  // useEffect(() => {
+  //   db.collection("posts").onSnapshot((snapshot) =>
+  //     setPosts(
+  //       snapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         data: doc.data(),
+  //       }))
+  //     )
+  //   );
+  // }, []);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className={styles.feed}>
@@ -26,8 +45,14 @@ const Feed = (props) => {
                 placeholder="Search"
                 onFocus={onDbao}
                 id="media2"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
               />
-              {show ? <button type="submit">Send</button> : null}
+              {show ? (
+                <button type="submit" onClick={sendPost}>
+                  Send
+                </button>
+              ) : null}
             </form>
           </div>
           <div className={styles.feed__inputoption}>
@@ -45,11 +70,15 @@ const Feed = (props) => {
             />
           </div>
         </div>
-        <Post
-          name="Mir Kawash Habibzade"
-          descr="Description"
-          message="messasge goes here"
-        />
+
+        <Post name="kawash" descr="testing description" message="hello Guys" />
+        <Post name="kawash" descr="testing description" message="hello Guys1" />
+        <Post name="kawash" descr="testing description" message="hello Guys2" />
+        <Post name="kawash" descr="testing description" message="hello Guys3" />
+        <Post name="kawash" descr="testing description" message="hello Guys3" />
+        <Post name="kawash" descr="testing description" message="hello Guys3" />
+        <Post name="kawash" descr="testing description" message="hello Guys3" />
+        <Post name="kawash" descr="testing description" message="hello Guys3" />
       </div>
     </>
   );
