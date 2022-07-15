@@ -9,8 +9,8 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
 import Post from "./Post";
-import { db } from "./firebase";
-import firebase from "firebase/compat/app";
+import { app, database } from "/pages/api/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 
 const Feed = () => {
   const [input, setInput] = useState("");
@@ -20,7 +20,7 @@ const Feed = () => {
   console.log(show);
 
   // useEffect(() => {
-  //   db.collection("posts").onSnapshot((snapshot) =>
+  //   addDoc.collection("posts").onSnapshot((snapshot) =>
   //     setPosts(
   //       snapshot.docs.map((doc) => ({
   //         id: doc.id,

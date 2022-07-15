@@ -22,7 +22,7 @@ const Navbar = (props) => {
     { name: "Notification", Icon: <NotificationsActiveIcon />, getaway: "/" },
     {
       avatar:
-        "https://media-exp2.licdn.com/dms/image/C4D03AQFUWjDlOD8vXQ/profile-displayphoto-shrink_100_100/0/1612563234794?e=1661990400&v=beta&t=WvKeZnMoBBM2OxaC3o-NTlZUZpNeqCm6vKooQwDYSI4",
+        "https://media-exp2.licdn.com/dms/image/D4D35AQFtphEOf49HYg/profile-framedphoto-shrink_400_400/0/1657620737811?e=1658361600&v=beta&t=nPlrNr9GR_yzW5ce5oNgPCwXPdGzwGlDOqy_tl57ed4",
       name1: "Mir",
     },
   ];

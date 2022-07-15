@@ -1,8 +1,7 @@
 /** @format */
 
-import firebase from "firebase/compat/app";
-import auth from "firebase/compat/auth";
-import firestore from "firebase/compat/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyDHkpgznyrMIjDI_KD2aX7ea86iLWG0YMc",
   authDomain: "linden-clone.firebaseapp.com",
@@ -14,7 +13,6 @@ const firebaseConfig = {
   measurementId: "G-PWR2V1BDNH",
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-const auth1 = firebaseApp.auth();
-export { db, auth };
+export const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+export const database = getFirestore(app);
